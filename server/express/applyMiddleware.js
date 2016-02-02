@@ -1,23 +1,20 @@
 import bodyParser from 'body-parser';
 import logger from 'morgan';
-import favicon from 'serve-favicon';
 import responseTime from 'response-time';
 import compression from 'compression';
 import helmet from 'helmet';
 import errorhandler from 'errorhandler';
 
-export const applyMiddleware = (app, port) => {
+export const applyMiddleware = (app) => {
   app.use(logger('dev'));
   app.use(responseTime());
   app.use(compression());
   app.use(helmet());
   app.use(helmet.hidePoweredBy({ setTo: 'Fantasy Unicorns' }));
   app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
-  app.use(favicon('public/favicon.ico'));
 
   if(process.env.NODE_ENV !== 'production') {
-    app.use(helmet.frameguard('allow-from', `http://localhost:${port}`));
+    app.use(helmet.frameguard('allow-from', `*`));
     app.use(errorhandler());
   }
 

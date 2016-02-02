@@ -4,7 +4,7 @@ import routes from '../routes/hobbies';
 
 const app = express();
 
-applyMiddleware(app, 4000);
+applyMiddleware(app);
 
 routes(app);
 

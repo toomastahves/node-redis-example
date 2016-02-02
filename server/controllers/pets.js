@@ -8,6 +8,15 @@ export const getPets = (req, res) => {
   });
 };
 
+export const getPet = (req, res) => {
+  const _id = req.params._id;
+  Pet.findById(_id, (err, pet) => {
+    if (!err) {
+      res.status(200).send(pet);
+    }
+  });
+};
+
 export const createPet = (req, res) => {
   const p = new Pet();
   p.name = req.body.name;

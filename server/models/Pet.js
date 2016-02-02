@@ -1,4 +1,4 @@
-import mongoose, { Schema } from 'mongoose';
+import { Schema } from 'mongoose';
 import db from '../databases/petsDatabase';
 
 const Pet = new Schema({

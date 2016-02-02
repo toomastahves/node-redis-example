@@ -1,7 +1,7 @@
-import mongoose, { Schema } from 'mongoose';
+import { Schema } from 'mongoose';
 import db from '../databases/hobbiesDatabase';
 
-const Hobbie = new Schema({
+const Hobby = new Schema({
   name: {
     type: String,
     required: true
@@ -11,4 +11,4 @@ const Hobbie = new Schema({
   }
 });
 
-export default db().model('Hobbie', Hobbie);
+export default db().model('Hobby', Hobby);

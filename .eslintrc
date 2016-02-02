@@ -158,7 +158,7 @@
     "array-bracket-spacing": 0,
     "block-spacing": [1, "always"],
     "brace-style": 1,
-    "camelcase": [1, {"properties": "always"}],
+    "camelcase": 0,
     "comma-spacing": 1,
     "comma-style": [1, "last"],
     "computed-property-spacing": [1, "never"],

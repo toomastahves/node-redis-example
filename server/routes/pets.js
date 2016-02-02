@@ -1,4 +1,4 @@
-import { getPets, createPet, updatePet, deletePet } from '../controllers/pets';
+import { getPets, createPet, updatePet, deletePet, getPet } from '../controllers/pets';
 
 const routes = (app) => {
   app.route('/api/pets')
@@ -6,6 +6,8 @@ const routes = (app) => {
     .post(createPet)
     .put(updatePet)
     .delete(deletePet);
+  app.route('/api/pet/:_id')
+    .get(getPet);
 };
 
 export default routes;
