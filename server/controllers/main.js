@@ -2,7 +2,6 @@ import request from 'request';
 import async from 'async';
 
 import { connectToCacheDatabase } from '../databases/cacheDatabase';
-
 const cache = connectToCacheDatabase();
 
 export const getPetById = (req, res) => {
@@ -21,7 +20,7 @@ export const getPetById = (req, res) => {
         if(!error2 && response.statusCode === 200) {
           console.log('From Mongo database.');
           res.send(body);
-          cache.set(req.params._id, JSON.stringify(body), (error3) => {
+          cache.setex(req.params._id, 10, JSON.stringify(body), (error3) => {
             if(error3) {
               throw error3;
             }
@@ -50,7 +49,7 @@ export const getHobbyById = (req, res) => {
         if(!error2 && response.statusCode === 200) {
           console.log('From Mongo database.');
           res.send(body);
-          cache.set(req.params._id, JSON.stringify(body), (error3) => {
+          cache.setex(req.params._id, 10, JSON.stringify(body), (error3) => {
             if(error3) {
               throw error3;
             }
