@@ -1,7 +1,7 @@
 {
   "name": "node-redis-example",
   "version": "0.0.1",
-  "description": "React starter",
+  "description": "Example with Node and Redis",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
