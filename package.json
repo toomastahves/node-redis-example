@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "node-redis-example",
   "version": "0.0.1",
   "description": "React starter",
   "main": "index.js",
@@ -13,18 +13,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toomastahves/react-starter.git"
+    "url": "git+https://github.com/toomastahves/node-redis-example.git"
   },
   "keywords": [],
   "author": "Toomas Tahves",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/toomastahves/react-starter/issues"
+    "url": "https://github.com/toomastahves/node-redis-example/issues"
   },
   "engines": {
     "node": "5.5.0"
   },
-  "homepage": "https://github.com/toomastahves/react-starter#readme",
+  "homepage": "https://github.com/toomastahves/node-redis-example#readme",
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "chai": "^3.4.1",
